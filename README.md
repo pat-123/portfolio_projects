@@ -22,12 +22,14 @@ For detailed analysis, click https://github.com/pat-123/misc/blob/master/noteboo
 # 3. Predicting measure of disease progression one year after baseline
 
 using the sklearn inuilt diabetes dataset, I have demonstrated the overfit, underfit issue
+
 For detailed analysis, click https://github.com/pat-123/misc/blob/master/notebooks/linear_regr_diabetes.ipynb
 
 # 4. Implementing NaiveBayes
 
 This project is just an exercise to understand naive bayes. I have used the in-built algorithm to get probaility values and then calcuated conditional probabilities manually to match with the former.
 Dataset is dummy dataa and 80% model score is acheived in classification of this problem set
+
 For detailed analysis, click https://github.com/pat-123/misc/blob/master/notebooks/naive_bayes.ipynb
 
 # 5. Classification on IRIS dataset
