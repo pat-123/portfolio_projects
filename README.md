@@ -90,4 +90,4 @@ There are ten independent variables which predict the dependent variable Item_Ou
 - For detailed analysis, click https://github.com/pat-123/bigmart
 
 
-# overall the intermediate projects are in a structured format, basically in python modules 
+## NOTE : Overall the intermediate projects are in a structured format, basically in python modules 
