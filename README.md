@@ -49,17 +49,20 @@ In this project I investigated a dataset containing information about Titanic pa
 - I have used RandomForest, SVM, NaiveBayes and Randomforest performs best with an average of 0.82 with 5 folds, with a max of 0.86
 ## key points
 
-For detailed analysis, click https://github.com/pat-123/Titanic
+- For detailed analysis, click https://github.com/pat-123/Titanic
 
 # 2. Predicting sales for bigmart
 This is a regression problem, where predict the sale contribution of each sale item towards the overall outlet sale.
 There are ten independent variables which predict the dependent variable Item_Outlet_Sale
 ## Key points
 - This dataset is heavy on categorical variables and model score depends on how well the chosen sub-categories describe the sale of outlet
+  - This project is heavy on bar graphs and visualizations
+  - Feature engineering was critical in getting a better score without these new engineered features
 - It was challenging to see, which particular food items or non consumables contribute more as compared to others in the same category and include those to increase the model score
 - Overall the Item_Outlet_Sales is curvier rather than linear relation, and hence linearregression wont do much good
-- - Acheived a model score of 0.55 with rmse of 0.17
-For detailed analysis, click https://github.com/pat-123/bigmart
+  - Acheived a model score of 0.55 with rmse of 0.17
+  - LinearRegression works best when you have few features with more weightage than the rest, as opposed to randomforest whihc gives equal importance to all features and picks features randomly(and performance score also is very less)
+- For detailed analysis, click https://github.com/pat-123/bigmart
 
 
 3. Credit card fraud detection
