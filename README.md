@@ -63,16 +63,31 @@ There are ten independent variables which predict the dependent variable Item_Ou
   - Acheived a model score of 0.55 with rmse of 0.17
   - LinearRegression works best when you have few features with more weightage than the rest, as opposed to randomforest whihc gives equal importance to all features and picks features randomly(and performance score also is very less)
 
-## Modular code
+### Modular code
 - used utils package to place all the utility functions used by this project
 - All the common imports are placed under bigmart package
 - For detailed analysis, click https://github.com/pat-123/bigmart
 
-3. Credit card fraud detection
+# 3. Credit card fraud detection
+## Key points
+### Modular code
+- used utils package to place all the utility functions used by this project
+- All the common imports are placed under bigmart package
+- For detailed analysis, click https://github.com/pat-123/bigmart
 
-4. Santander customer transaction
+# 4. Santander customer transaction
+## Key points
+### Modular code
+- used utils package to place all the utility functions used by this project
+- All the common imports are placed under bigmart package
+- For detailed analysis, click https://github.com/pat-123/bigmart
 
-5. cab fare prediction
+# 5. cab fare prediction
+## Key points
+### Modular code
+- used utils package to place all the utility functions used by this project
+- All the common imports are placed under bigmart package
+- For detailed analysis, click https://github.com/pat-123/bigmart
 
 
 ## overall the intermediate projects are in a structured format, basically in python modules 
