@@ -62,8 +62,11 @@ There are ten independent variables which predict the dependent variable Item_Ou
 - Overall the Item_Outlet_Sales is curvier rather than linear relation, and hence linearregression wont do much good
   - Acheived a model score of 0.55 with rmse of 0.17
   - LinearRegression works best when you have few features with more weightage than the rest, as opposed to randomforest whihc gives equal importance to all features and picks features randomly(and performance score also is very less)
-- For detailed analysis, click https://github.com/pat-123/bigmart
 
+## Modular code
+- used utils package to place all the utility functions used by this project
+- All the common imports are placed under bigmart package
+- For detailed analysis, click https://github.com/pat-123/bigmart
 
 3. Credit card fraud detection
 
@@ -72,3 +75,4 @@ There are ten independent variables which predict the dependent variable Item_Ou
 5. cab fare prediction
 
 
+## overall the intermediate projects are in a structured format, basically in python modules 
