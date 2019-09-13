@@ -51,7 +51,15 @@ In this project I investigated a dataset containing information about Titanic pa
 
 For detailed analysis, click https://github.com/pat-123/Titanic
 
-#c2. Predicting sales for bigmart
+# 2. Predicting sales for bigmart
+This is a regression problem, where predict the sale contribution of each sale item towards the overall outlet sale.
+There are ten independent variables which predict the dependent variable Item_Outlet_Sale
+## Key points
+- This dataset is heavy on categorical variables and model score depends on how well the chosen sub-categories describe the sale of outlet
+- It was challenging to see, which particular food items or non consumables contribute more as compared to others in the same category and include those to increase the model score
+- Overall the Item_Outlet_Sales is curvier rather than linear relation, and hence linearregression wont do much good
+- - Acheived a model score of 0.55 with rmse of 0.17
+For detailed analysis, click https://github.com/pat-123/bigmart
 
 
 3. Credit card fraud detection
