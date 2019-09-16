@@ -40,6 +40,14 @@ For detailed analysis, click https://github.com/pat-123/misc/blob/master/noteboo
 
 For detailed analysis, click https://github.com/pat-123/iris
 
+# 6. DecisionTree pruning and xgboosting
+
+Here I have used dummy dataset to see my model overfits on training data, but fails to perform on test set(very poor performance). I have tried decision tree pruning along with n_estimators and max_features, to avoid the overfit and then see a drastic performance improvement in testing data as well, infact it has better score on test than training
+
+- Also on the same dataset, I have used GradientBoostingClassifier and XGBoostClassifier and observed best performance with max_depth paramter adjusted
+
+For details, click https://github.com/pat-123/misc/blob/master/notebooks/DecisionTree_Pruning_and_XGBoost.ipynb
+
 --------------------------------------------------------------------------
 Intermediate Projects
 --------------------------------------------------------------------------
@@ -48,7 +56,11 @@ Intermediate Projects
 In this project I investigated a dataset containing information about Titanic passengers by using NumPy and Pandas, which are two popular Python packages used for manipulating datasets. The goal of this project was to get acquainted with said tools, learn about the different data structures (NumPy Arrays, Series and DataFrames) they offer,and practice the key steps on the whole data analysis process.
 - I have used RandomForest, SVM, NaiveBayes and Randomforest performs best with an average of 0.82 with 5 folds, with a max of 0.86
 ## key points
-
+- Sex determined the survival rate the most(females the most), followed by Passengerclass(pclass=1), then family size(3,4,5) were the most important features
+- Model performs poor(0.79) without age and Fare properly cleaned(converting continous range to discrete categories). These both are the key features of this accurate prediction and needs to be handled properly
+- When age and fare was continous variables, trees would be having if else conditions and more the range, more the branches/splits would be there and the significance of that variable gets reduced
+Hence when you have a numeric variable with fewer number of values, its best to convert to str type(object) and treat it accordingly, which results in better predictions(since these variables were significant)
+- Hyper-parameter tuning also helps in getting better perfomance
 - For detailed analysis, click https://github.com/pat-123/Titanic
 
 # 2. Predicting sales for bigmart
