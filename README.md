@@ -81,6 +81,7 @@ There are ten independent variables which predict the dependent variable Item_Ou
 - For detailed analysis, click https://github.com/pat-123/bigmart
 
 # 3. Credit card fraud detection
+This project is about predicting the no of defaulters who will not pay the credit card bill next month
 ## Key points
 - The target class 'default' is highly imbalanced
 - undersampling vs oversampling
@@ -94,25 +95,52 @@ There are ten independent variables which predict the dependent variable Item_Ou
     - Since the standard dev of LIMIT_BAL is huge(>10k) and none of them are outliers, I chose oversampling
 - Few variables are already given as normalized  
 - Few variables like age,sex,marriage,education is given as numeric, but actually are categorical(fewer unique values)
-
+  - Sex = 1 has more defaulters than others
+  - People towards retirement(55-60 years) and people who just started their carriers(20-25) are more defaulters
+  - Marital status has nothing to do with non payment
+  - Customers with Education = 1 are good customers, customers with education=3 are highest defaulters
+- RandomForestClassifier performs the best with auc= 0.92 , model score = 0.86
 ### Modular code
 - Place all the utility functions used by this project in custom made utils package
 - All the common imports are placed under credit_card package
-- For detailed analysis, click https://github.com/pat-123/bigmart
+- For detailed analysis, click https://github.com/pat-123/credit_card_fraud
 
 # 4. Santander customer transaction
+This project is about predicting if a customer will do transaction or not in future(irrespective of the amount of transaction)
 ## Key points
+- With the predictions, we are more intrested to find out customers who are likely to make a transaction rather than the people who will not.
+- So basically we are focussing on positive cases the model can identify i.e. the recall(sensitivity) rather than specificity(True negative rate)
+- And it would cost a lot to loose on customers who are likely to make a transaction, i.e. False negative rate should be low(which is labeled as negative but they were actually positive
+So our focus is to get a model with high recall and low FNR, rather than specifity and FPR.
+- cons of oversampling: If we have say 90-10 in negative-positive cases, then our predictions are actually expected to be more in negative cases, in actual data or even in synthetic minority oversampling techiniq(SMOTE), but what happens in reality is that if prop is made to 50-50, then the predictions of negative and positive classes also becomes more balanced, which doesnt represent the real scenario
+- cons of undersampling: we may loose on signifcant information from the samples which we didn't include in the test , if deviation in the variable is more
+- naivebayes performs best with 0.88 model score with undersampling 
+- with oversampling we get 0.92 with randomforest, naive bayes stops at 0.89
+
 ### Modular code
 - Place all the utility functions used by this project in custom made utils package
-- All the common imports are placed under bigmart package
-- For detailed analysis, click https://github.com/pat-123/bigmart
+- All the common imports are placed under Santander package
+- For detailed analysis, click https://github.com/pat-123/Santander
 
 # 5. cab fare prediction
+This project is about predicting the fare of a cab ride, given the coordinates of pick/drop off, along with the pickup timestamp
 ## Key points
+- pickup timestamp analysis
+Derived information like was the ride took on a weekend, month end/start, peak night times(10pm-4AM) , peak evening hours(5pm-8pm) , afternoon times or any other normal times, year end, year start
+  - The rides on month start/end had higher average fares . Peak night times had greater fares slightly than peak evening hours in any time of the month
+  - only evening rides in month start showed a little rise in price, followed by noon times in month start and ending
+    - so overall  month start/end and peak night times recorded highest fares
+    - Peak night times(11pm-4AM) recorded the highest mean fare
+    - day/weekday has no effect
+    - seasons have no effect either
+    - time of the day like early morning or peak evening times had higher fares than the rest
+    - Also year wise also, higher fares are seen towards 2014,2015
+- Linear Regression performs the best with model score 0.71 average over 2 iterations, rmse = 0.15
+- XGBRegressor performs better with model score slighly improved
 ### Modular code
 - Place all the utility functions used by this project in custom made utils package
-- All the common imports are placed under bigmart package
-- For detailed analysis, click https://github.com/pat-123/bigmart
+- All the common imports are placed under cab_fare package
+- For detailed analysis, click https://github.com/pat-123/cab_fare
 
 
 ## NOTE : Overall the intermediate projects are in a structured format, basically in python modules 
