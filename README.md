@@ -82,9 +82,22 @@ There are ten independent variables which predict the dependent variable Item_Ou
 
 # 3. Credit card fraud detection
 ## Key points
+- The target class 'default' is highly imbalanced
+- undersampling vs oversampling
+  - undersampling : 
+    - Generally if we have variables contained with in a small range, we can depend on a sub sample from our training set to represent our dataset and take positive cases equal to the negative ones 
+    - This way the result will be same as if drawn on actual population
+    - I saw that except for 1 variable, we have low standard deviations, which suggests we can go undersampling as well, but due to that one variable in which the std is too high, if we take a undersample, then we have high chance missing some part of teh distrubution.
+  - oversampling :
+    - Here we artificially create samples of positive class which are in minority, to balance out the class distribution
+    - But since these values are aritifically generated, the result will be based on if the probability of either class is equal(since they are equal in no), whereas the actual distribution is largely imbalanced towards the negative class and we will see a huge difference in predictions also
+    - Since the standard dev of LIMIT_BAL is huge(>10k) and none of them are outliers, I chose oversampling
+- Few variables are already given as normalized  
+- Few variables like age,sex,marriage,education is given as numeric, but actually are categorical(fewer unique values)
+
 ### Modular code
 - Place all the utility functions used by this project in custom made utils package
-- All the common imports are placed under bigmart package
+- All the common imports are placed under credit_card package
 - For detailed analysis, click https://github.com/pat-123/bigmart
 
 # 4. Santander customer transaction
