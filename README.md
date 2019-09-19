@@ -50,6 +50,7 @@ For details, click https://github.com/pat-123/misc/blob/master/notebooks/Decisio
 
 # 7. Prinicipal component analysis
 
+In this file, I used PCA to reduce the dimensions, remove multi-collinearity b/w variables and reduce the variation also.
 I have tried to build a model by removing multicollinear variables by checking the vif between independent variable(manually), and also with in-built variation_inflation_factor() and got a model score on sklearn breast cancer dataset to be 0.733
 
 Another way I tried with PCA to reduce the dimensions from 30 to 2 and then see a visual on the decision boundary and model score improved a little because of standardization
