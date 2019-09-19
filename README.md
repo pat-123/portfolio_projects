@@ -48,6 +48,14 @@ Here I have used dummy dataset to see my model overfits on training data, but fa
 
 For details, click https://github.com/pat-123/misc/blob/master/notebooks/DecisionTree_Pruning_and_XGBoost.ipynb
 
+# 7. Prinicipal component analysis
+
+I have tried to build a model by removing multicollinear variables by checking the vif between independent variable(manually), and also with in-built variation_inflation_factor() and got a model score on sklearn breast cancer dataset to be 0.733
+
+Another way I tried with PCA to reduce the dimensions from 30 to 2 and then see a visual on the decision boundary and model score improved a little because of standardization
+
+For details, click https://github.com/pat-123/misc/blob/master/notebooks/Multi-collinearity%20and%20PCA.ipynb
+
 --------------------------------------------------------------------------
 Intermediate Projects
 --------------------------------------------------------------------------
