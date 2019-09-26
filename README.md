@@ -151,5 +151,18 @@ Derived information like was the ride took on a weekend, month end/start, peak n
 - All the common imports are placed under cab_fare package
 - For detailed analysis, click https://github.com/pat-123/cab_fare
 
-
+# 6. Traffic crash
+This project is about reading a geojson format about traffic crashes all over the world and extracting all information to pandas dataframe. After the initial cleaning of data, the data is written to a postgresql database and query optimization will be done for queries on column geo_Coord_lat , geo_coord_lon and crash_timestamp
+### key points:
+- A lot of columns capture the timestamp but it is broken in to day, month, year.
+  - crash_date (along with crash_time) needs to be converted to timestamp object and then stored
+  - crash month, crash time are redundant, once we have all the data consolidated in timestamp object
+- The Task is to find all crashes that happened between the timing 8 pm and 8:40 pm in any location ,which is within 11 km radius of coordinates [-78.95570271414434, 35.95956710652295]
+  - In pandas: Used geodesic distance to calculate the dis b/w given coordinates and the given default coordinates
+  - Once the data is written to postgresql table, I have used select query along with geography datatype to this task
+    - Also build simple and composite indexes
+  - Connect python to postgresql DB using psycopg2 package
+  - Once the connection is made, execute create,insert,select queries
+  For detailed code, click https://github.com/pat-123/traffic_crash
+  
 ## NOTE : Overall the intermediate projects are in a structured format, basically in python modules 
