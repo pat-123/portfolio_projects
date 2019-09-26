@@ -163,6 +163,6 @@ This project is about reading a geojson format about traffic crashes all over th
     - Also build simple and composite indexes
   - Connect python to postgresql DB using psycopg2 package
   - Once the connection is made, execute create,insert,select queries
-  For detailed code, click https://github.com/pat-123/traffic_crash
+ - For detailed code, click https://github.com/pat-123/traffic_crash
   
 ## NOTE : Overall the intermediate projects are in a structured format, basically in python modules 
